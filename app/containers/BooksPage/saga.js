@@ -14,7 +14,7 @@ export function* searcBooks() {
 
   const {payload} = yield select(makeSelectBooksPage())
   // Select username from store
-  const requestURL = `http://openlibrary.org/search.json?${serialize(payload)}`
+  const requestURL = `https://openlibrary.org/search.json?${serialize(payload)}`
   try {
     // Call our request helper (see 'utils/request')
     const rresponse = yield call(request, requestURL);
